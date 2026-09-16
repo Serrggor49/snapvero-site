@@ -1,0 +1,40 @@
+/* Общий стиль страниц сайта Snapvero. Файл держим отдельно, чтобы три страницы не
+   расходились между собой; внешних ресурсов и шрифтов нет намеренно. Цвета взяты из
+   палитры «Точного инструмента» (core/designsystem/Theme.kt). */
+:root {
+  --bg: #F4F6FA;
+  --surface: #FFFFFF;
+  --text: #17263C;
+  --muted: #526078;
+  --accent: #2355D6;
+  --line: rgba(23, 38, 60, .12);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111925;
+    --surface: #1B2535;
+    --text: #E3E9F2;
+    --muted: #A7B3C6;
+    --accent: #ADC5FF;
+    --line: rgba(227, 233, 242, .14);
+  }
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+main { max-width: 660px; margin: 0 auto; padding: 40px 20px 64px; }
+h1 { font-size: 26px; font-weight: 600; margin: 0 0 4px; letter-spacing: -.01em; }
+h2 { font-size: 19px; font-weight: 600; margin: 36px 0 8px; }
+h3 { font-size: 16px; font-weight: 600; margin: 20px 0 4px; }
+.muted { color: var(--muted); }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+a { color: var(--accent); }
+table { border-collapse: collapse; width: 100%; margin: 12px 0; display: block; overflow-x: auto; }
+th, td { text-align: left; padding: 8px 12px 8px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-weight: 600; }
+nav { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); }
+nav a { margin-right: 18px; }

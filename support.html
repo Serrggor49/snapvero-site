@@ -1,0 +1,96 @@
+<!doctype html>
+<!--
+  Страница поддержки: на неё указывает обязательное поле Support URL в App Store Connect
+  (support_url в fastlane/metadata/ios) и контакт разработчика в Google Play. Исходник
+  здесь, публикуется из репозитория snapvero-site. Английский — язык ревьюеров; ответы
+  пользователям возможны на русском и английском, это сказано в тексте. Внешних ресурсов
+  нет намеренно. Обещания в разделе «What we can help with» должны совпадать с тем, что
+  приложение действительно делает.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snapvero — Support</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+<main>
+  <h1>Snapvero Support</h1>
+  <p class="muted">Before-and-after photo reports for renovation work</p>
+
+  <p>
+    Write to <a href="mailto:49serggor@gmail.com">49serggor@gmail.com</a>. One person
+    answers, in English or Russian, usually within two business days.
+  </p>
+
+  <h2>What to include in a bug report</h2>
+  <ul>
+    <li>Device and OS version, for example “iPhone 14, iOS 18.5” or “Samsung S23, Android 15”.</li>
+    <li>App version, shown in Settings.</li>
+    <li>What you did, what you expected, what happened instead.</li>
+    <li>Whether it happens every time or once.</li>
+    <li>A screenshot, if the problem is visible on screen. Blur anything confidential — we do not need your client's data.</li>
+  </ul>
+
+  <h2>Questions we get</h2>
+
+  <h3>Where are my projects stored?</h3>
+  <p>
+    On the device only. There is no account and no cloud: nothing is uploaded, and
+    nothing syncs between your phone and tablet. To move a project to another device,
+    export it as a <code>.ppair</code> archive and import that file on the other device.
+  </p>
+
+  <h3>I deleted the app — can I get my projects back?</h3>
+  <p>
+    No. Uninstalling removes the app's storage, and the app is deliberately excluded from
+    system backups so that client photos do not end up in a cloud backup. Export an
+    archive before uninstalling, before switching phones, and after any project you would
+    not want to redo.
+  </p>
+
+  <h3>The report should look different</h3>
+  <p>
+    Layout is chosen at export time: three ready-made layouts or a custom grid from 1×1 to
+    4×4, portrait or landscape, A4 or Letter, two quality profiles, an optional cover, and
+    a choice of which business details are printed. The report language is picked
+    separately from the interface language — a Russian-speaking user can send a German
+    report.
+  </p>
+
+  <h3>Can I edit the report after export?</h3>
+  <p>
+    Export to DOCX and open it in Word or any compatible editor. Headings, paragraphs,
+    sections and captions stay editable; photos are embedded with the markup already
+    flattened into the image.
+  </p>
+
+  <h3>Do photos under a mask stay hidden?</h3>
+  <p>
+    In exported PDF and DOCX files, yes — masks are flattened into the pixels. A
+    <code>.ppair</code> archive is different: it carries the original photos and the
+    markup separately so the project stays editable, and the app warns you about this
+    before the export. Send archives only to people who may see the originals.
+  </p>
+
+  <h3>Something failed to save</h3>
+  <p>
+    The app tells you when a write fails and keeps the change so you can retry. If it
+    keeps failing, check free space on the device first, then write to us with the steps.
+  </p>
+
+  <h2>Privacy</h2>
+  <p>
+    The app sends no project data anywhere; only pseudonymous crash and usage diagnostics
+    leave the device. Details are in the
+    <a href="privacy.html">Privacy Policy</a>.
+  </p>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+  </nav>
+</main>
+</body>
+</html>
