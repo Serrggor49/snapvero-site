@@ -2,10 +2,12 @@
 <!--
   Страница поддержки: на неё указывает обязательное поле Support URL в App Store Connect
   (support_url в fastlane/metadata/ios) и контакт разработчика в Google Play. Исходник
-  здесь, публикуется из репозитория snapvero-site. Английский — язык ревьюеров; ответы
-  пользователям возможны на русском и английском, это сказано в тексте. Внешних ресурсов
-  нет намеренно. Обещания в разделе «What we can help with» должны совпадать с тем, что
-  приложение действительно делает.
+  здесь, публикуется из репозитория snapvero-site. Английский — язык ревьюеров; языки
+  ответа названы в тексте. Внешних ресурсов нет намеренно.
+
+  Раздел вопросов описывает фактическое поведение приложения и обязан меняться вместе с
+  ним: страница поддержки, обещающая несуществующее, — дефект того же веса, что и ошибка
+  в коде.
 -->
 <html lang="en">
 <head>
@@ -16,74 +18,98 @@
 </head>
 <body>
 <main>
-  <h1>Snapvero Support</h1>
-  <p class="muted">Before-and-after photo reports for renovation work</p>
+  <h1>Support</h1>
+  <p class="muted">Snapvero · Before-and-after photo reports</p>
 
+  <h2>Contact</h2>
   <p>
-    Write to <a href="mailto:49serggor@gmail.com">49serggor@gmail.com</a>. One person
-    answers, in English or Russian, usually within two business days.
+    Write to <a href="mailto:49serggor@gmail.com">49serggor@gmail.com</a>. Enquiries are
+    answered in English or Russian, normally within two working days.
   </p>
 
-  <h2>What to include in a bug report</h2>
+  <h2>Reporting a problem</h2>
+  <p>
+    To resolve a problem quickly, please include:
+  </p>
   <ul>
-    <li>Device and OS version, for example “iPhone 14, iOS 18.5” or “Samsung S23, Android 15”.</li>
-    <li>App version, shown in Settings.</li>
-    <li>What you did, what you expected, what happened instead.</li>
-    <li>Whether it happens every time or once.</li>
-    <li>A screenshot, if the problem is visible on screen. Blur anything confidential — we do not need your client's data.</li>
+    <li>the device and operating system version, for example iPhone 14 with iOS 18.5, or Samsung Galaxy S23 with Android 15;</li>
+    <li>the application version, shown on the Settings screen;</li>
+    <li>the steps you took, the result you expected and the result you observed;</li>
+    <li>whether the problem occurs every time or occurred once;</li>
+    <li>a screenshot, where the problem is visible on screen.</li>
   </ul>
-
-  <h2>Questions we get</h2>
-
-  <h3>Where are my projects stored?</h3>
   <p>
-    On the device only. There is no account and no cloud: nothing is uploaded, and
-    nothing syncs between your phone and tablet. To move a project to another device,
-    export it as a <code>.ppair</code> archive and import that file on the other device.
+    Please obscure any confidential information before sending a screenshot; details of
+    your clients and sites are not required in order to investigate a fault.
   </p>
 
-  <h3>I deleted the app — can I get my projects back?</h3>
+  <h2>Frequently asked questions</h2>
+
+  <h3>Where are projects stored?</h3>
   <p>
-    No. Uninstalling removes the app's storage, and the app is deliberately excluded from
-    system backups so that client photos do not end up in a cloud backup. Export an
-    archive before uninstalling, before switching phones, and after any project you would
-    not want to redo.
+    Entirely on the device. Snapvero has no user account and no cloud storage, so projects
+    are not uploaded and do not synchronise between devices.
   </p>
 
-  <h3>The report should look different</h3>
+  <h3>How do I move a project to another device?</h3>
   <p>
-    Layout is chosen at export time: three ready-made layouts or a custom grid from 1×1 to
-    4×4, portrait or landscape, A4 or Letter, two quality profiles, an optional cover, and
-    a choice of which business details are printed. The report language is picked
-    separately from the interface language — a Russian-speaking user can send a German
-    report.
+    Export the project as a portable archive and import that file on the other device. The
+    archive contains the original photographs together with the annotations, so work can
+    continue without loss of quality or editability.
   </p>
 
-  <h3>Can I edit the report after export?</h3>
+  <h3>Can projects be recovered after the application is removed?</h3>
   <p>
-    Export to DOCX and open it in Word or any compatible editor. Headings, paragraphs,
-    sections and captions stay editable; photos are embedded with the markup already
-    flattened into the image.
+    No. Removing the application deletes its stored data, and the application is
+    deliberately excluded from system backups so that photographs of client sites are not
+    copied into cloud backups. We recommend exporting an archive of any project you would
+    not want to reconstruct, and before changing devices.
   </p>
 
-  <h3>Do photos under a mask stay hidden?</h3>
+  <h3>How is the appearance of a report controlled?</h3>
   <p>
-    In exported PDF and DOCX files, yes — masks are flattened into the pixels. A
-    <code>.ppair</code> archive is different: it carries the original photos and the
-    markup separately so the project stays editable, and the app warns you about this
-    before the export. Send archives only to people who may see the originals.
+    The layout is selected at the time of export: three predefined layouts or a custom
+    grid of up to four columns and four rows, portrait or landscape orientation, A4 or
+    Letter paper, two quality profiles, an optional cover page, and a choice of which
+    business details appear in the report. The pages can be previewed before the file is
+    saved or sent.
   </p>
 
-  <h3>Something failed to save</h3>
+  <h3>Can a report be edited after it is exported?</h3>
   <p>
-    The app tells you when a write fails and keeps the change so you can retry. If it
-    keeps failing, check free space on the device first, then write to us with the steps.
+    Yes. Export the report in Word format and open it in Word or a compatible editor:
+    headings, captions and paragraphs remain editable text. Photographs are embedded with
+    their annotations already merged into the image.
+  </p>
+
+  <h3>Do masked areas remain hidden?</h3>
+  <p>
+    In exported PDF and Word files the mask is merged into the image, so the area beneath
+    it is not present in the file. A portable archive is different by design: it preserves
+    the original photographs and the annotations separately so that the project remains
+    editable. The application warns you of this before the archive is created. Archives
+    should therefore be sent only to recipients who may see the original photographs.
+  </p>
+
+  <h3>The report is produced in the wrong language</h3>
+  <p>
+    The language of the report is chosen on the export screen and is independent of the
+    interface language, so a report may be produced in a language other than the one you
+    work in. The interface language follows the system setting and can be changed in
+    Settings.
+  </p>
+
+  <h3>A change could not be saved</h3>
+  <p>
+    The application reports a failed save and retains the change so that the operation can
+    be repeated. If saving fails repeatedly, check the free storage space on the device
+    and then contact us with the steps that reproduce the problem.
   </p>
 
   <h2>Privacy</h2>
   <p>
-    The app sends no project data anywhere; only pseudonymous crash and usage diagnostics
-    leave the device. Details are in the
+    Content created in the application is not transmitted anywhere. The only information
+    leaving the device is pseudonymous diagnostic data, described in full in the
     <a href="privacy.html">Privacy Policy</a>.
   </p>
 

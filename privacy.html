@@ -5,8 +5,13 @@
   публикуется страница из отдельного публичного репозитория snapvero-site (GitHub Pages),
   куда копируется при каждом изменении. Внешних ресурсов нет намеренно (ссылки наружу —
   можно, подгрузка ресурсов — нет). Страница только на английском — это язык, который
-  читают ревьюеры обоих сторов. Содержание описывает фактическое поведение приложения:
-  менять состав телеметрии, не меняя эту страницу и анкеты в консолях, нельзя.
+  читают ревьюеры обоих сторов.
+
+  Документ обязан описывать фактическое поведение приложения: категории данных совпадают
+  с PrivacyInfo.xcprivacy, анкетой «Безопасность данных» в Play и решением 002. Менять
+  состав телеметрии, не меняя эту страницу и анкеты, нельзя. Формулировки — обобщённые
+  категории данных, а не имена событий и полей: имена меняются от версии к версии, и
+  политика от этого устаревает молча.
 -->
 <html lang="en">
 <head>
@@ -17,144 +22,172 @@
 </head>
 <body>
 <main>
-  <h1>Snapvero</h1>
-  <p class="muted">Privacy Policy · Effective September 16, 2026</p>
+  <h1>Privacy Policy</h1>
+  <p class="muted">Snapvero · Effective September 16, 2026</p>
 
   <p>
-    Snapvero builds before-and-after photo reports for renovation and repair work. It is
-    an offline app: there is no account, no sign-in and no server of ours. Your projects,
-    photos, notes, business details, PDF and Word files and portable archives stay on
-    your device, and we have no access to them.
+    This policy explains what information the Snapvero mobile application collects, why it
+    is collected, and the choices available to you. Snapvero is an offline application for
+    preparing before-and-after photo reports. It has no user accounts and no server of
+    ours: the projects, photographs and documents you create remain on your device.
   </p>
 
-  <h2>Who we are</h2>
+  <h2>1. Who is responsible</h2>
   <p>
-    The app is developed and operated by the independent developer published on the App
-    Store and Google Play as the owner of Snapvero, acting as the data controller for the
-    purposes of data protection law. Contact for privacy requests:
+    The controller of the data described here is the independent developer identified as
+    the publisher of Snapvero on the App Store and Google Play. Enquiries about this
+    policy or about your personal data may be sent to
     <a href="mailto:49serggor@gmail.com">49serggor@gmail.com</a>.
   </p>
 
-  <h2>What stays on your device</h2>
+  <h2>2. Information that stays on your device</h2>
   <p>
-    Everything you create in the app: projects and their sections, items and before/after
-    photo pairs, the markup you draw on photos, text blocks, captions and notes, the
-    performer and company details you enter for the report header, your logo, generated
-    PDF and DOCX files, and <code>.ppair</code> archives. None of it is uploaded anywhere
-    by the app. When you share a report, your own system share sheet sends the file to
-    the recipient you pick; from that moment the file is governed by whatever service you
-    chose.
+    All content you create in the application — projects, photographs and the annotations
+    drawn on them, notes and captions, the business details used in report headers, your
+    logo, and the PDF, Word and archive files produced on export — is stored locally on
+    your device. It is not transmitted to the developer and is not accessible to us.
   </p>
   <p>
-    The camera is used only to take photos into the current project. The system photo
-    picker returns the photos you select; the app copies them into its own storage and
-    does not read the rest of your library. There is no location tag added by the app, no
-    address book access and no microphone use.
-  </p>
-
-  <h2>What the app sends: diagnostics</h2>
-  <p>
-    The only data that leaves your device is pseudonymous diagnostics through Firebase
-    Analytics and Firebase Crashlytics (Google LLC). This is why the Android build asks
-    for the <code>INTERNET</code> permission; the app itself works fully offline.
-  </p>
-  <p>Usage events are a fixed, closed list — no free text is ever sent:</p>
-  <table>
-    <tr><th>Event</th><th>Meaning</th></tr>
-    <tr><td><code>screen_view</code></td><td>A screen was opened, by its fixed internal name</td></tr>
-    <tr><td><code>project_created</code></td><td>A project was created</td></tr>
-    <tr><td><code>pdf_generated</code></td><td>A PDF was saved</td></tr>
-    <tr><td><code>archive_exported</code></td><td>An archive file was created</td></tr>
-    <tr><td><code>archive_imported</code></td><td>An archive file was imported</td></tr>
-  </table>
-  <p>
-    Crash reports contain the stack trace, the screen the app was on and an anonymous
-    code for a failed save. Project names, photos, notes, business details, file paths
-    and identifiers are never added to these reports.
+    When you share an exported report, the file is handed to the destination you select in
+    your operating system's sharing menu. From that point the file is subject to the terms
+    of the service or application you chose.
   </p>
   <p>
-    Alongside the events, the Firebase SDKs attach technical identifiers and device
-    information: an app-instance ID, device model, OS and app version, and an approximate
-    location (country or region) derived from your IP address by Google. That makes the
-    data pseudonymous rather than fully anonymous. It is used for one purpose —
-    analytics: knowing which features are used and which builds crash.
-  </p>
-  <p>
-    No advertising identifier is collected: the Android advertising ID permissions are
-    removed from the app, iOS IDFV collection and ad personalisation signals are turned
-    off, and no advertising SDK is present. We do not track you across apps or websites
-    and there is no advertising in the app.
-  </p>
-  <p>
-    <strong>There is currently no in-app switch for diagnostics.</strong> If you do not
-    want the app to send them, you can block its network access with your operating
-    system's own controls, or uninstall the app. If a switch is added in a later version,
-    this page will say so.
+    The application requests access to the camera only when you take a photograph for a
+    report. Photographs added from your library are supplied by the operating system's own
+    picker; the application does not read the contents of your photo library, does not add
+    location information to photographs, and does not access contacts or the microphone.
   </p>
 
-  <h2>Service providers</h2>
+  <h2>3. Information we collect</h2>
   <p>
-    We do not sell personal data, do not share it for advertising and have no other
-    recipients than the two diagnostics services below.
+    The application uses Firebase Analytics and Firebase Crashlytics, both provided by
+    Google LLC, to monitor stability and understand how the application is used. Through
+    these services we receive:
   </p>
   <ul>
     <li>
-      <strong>Firebase Analytics</strong> (Google LLC) — the usage events listed above,
-      app-instance ID, device and app information, IP-derived approximate location.
+      <strong>Usage data</strong> — which screens are opened and which principal
+      operations are performed, recorded as a fixed set of predefined events. This data
+      never includes the content of your projects: no photographs, project or client
+      names, notes, business details or file names are transmitted.
     </li>
     <li>
-      <strong>Firebase Crashlytics</strong> (Google LLC) — crash logs and stack traces,
-      device model, OS version, app version.
+      <strong>Device and application information</strong> — device model, operating
+      system version, application version and language settings.
+    </li>
+    <li>
+      <strong>Identifiers</strong> — a randomly generated installation identifier
+      assigned by Firebase. No advertising identifier is collected.
+    </li>
+    <li>
+      <strong>Approximate location</strong> — a country or region derived by Google from
+      the IP address of the connection. Precise location is never collected.
+    </li>
+    <li>
+      <strong>Diagnostic data</strong> — crash reports, including the technical state of
+      the application at the moment of failure, and basic performance measurements.
     </li>
   </ul>
   <p>
-    Google processes this data under its own privacy terms; data may be processed on
-    servers outside your country, including in the United States. See
+    This information is pseudonymous: it is associated with a technical identifier rather
+    than with your name or contact details, and we make no attempt to link it to you.
+  </p>
+
+  <h2>4. Why we collect it and on what legal basis</h2>
+  <p>
+    The information described in section 3 is used for one purpose: to keep the
+    application working correctly and to guide its further development. We identify
+    crashes and the builds and devices affected by them, and we observe which features are
+    used so that development effort is directed accordingly.
+  </p>
+  <p>
+    Where the General Data Protection Regulation applies, the legal basis for this
+    processing is our legitimate interest in maintaining, securing and improving the
+    application (Article 6(1)(f)). You have the right to object to processing carried out
+    on this basis; see sections 8 and 9.
+  </p>
+  <p>
+    We do not use this information for advertising or profiling, and the application
+    contains no advertising. We do not sell personal information and do not share it for
+    cross-context behavioural advertising, as those terms are used in United States
+    privacy laws.
+  </p>
+
+  <h2>5. Your choices</h2>
+  <p>
+    The application does not currently offer an in-application setting to switch
+    diagnostics off. You can prevent the collection described in section 3 by withdrawing
+    the application's access to the network in your device settings, or by removing the
+    application. Doing so does not affect any other function: Snapvero is designed to work
+    entirely offline. Should such a setting be added in a future version, this policy will
+    be updated accordingly.
+  </p>
+
+  <h2>6. Recipients and international transfers</h2>
+  <p>
+    Diagnostic information is processed by Google LLC in its capacity as provider of
+    Firebase Analytics and Firebase Crashlytics, under the
     <a href="https://firebase.google.com/support/privacy" rel="noopener">Firebase privacy
-    information</a>.
+    and security terms</a>. No other third party receives data from the application.
+  </p>
+  <p>
+    Google processes this data on servers located in several countries, including the
+    United States. Transfers outside the European Economic Area are governed by the data
+    protection terms and standard contractual clauses that form part of Google's terms for
+    these services.
   </p>
 
-  <h2>Retention and deletion</h2>
+  <h2>7. Retention</h2>
   <p>
-    Because we hold no account, there is nothing on our side to delete. Data on your
-    device is removed when you delete a project, clear temporary files in Settings, or
-    uninstall the app. Uninstalling removes the app's whole storage, including projects
-    and photos — export an archive first if you want to keep them.
+    Because no account exists, we hold no records that identify you. Diagnostic
+    information is retained by Google for limited periods: crash reports for approximately
+    90 days, and analytics data for the retention period configured for the project, which
+    does not exceed 14 months.
   </p>
   <p>
-    The app deliberately keeps its data out of system backups: Android backup is disabled
-    for the app, and the iOS data directory is excluded from iCloud and computer backups.
-    Files you saved or shared yourself (a PDF in Files, a photo you re-saved) follow the
-    rules of wherever you put them.
-  </p>
-  <p>
-    Diagnostics data is retained on Google's servers for limited periods: crash reports
-    for around 90 days, analytics data for the period configured in Firebase (at most
-    14 months).
+    Content stored on your device is retained until you delete it. Deleting a project
+    removes it and its photographs; removing the application deletes all of its stored
+    data. The application is deliberately excluded from system backups on both platforms,
+    so its content is not copied to iCloud or to Android backup services. Files you have
+    exported or shared yourself are governed by the rules of the location you saved them
+    to.
   </p>
 
-  <h2>Your rights</h2>
+  <h2>8. Your rights</h2>
   <p>
-    You can export any project to a portable archive, correct or delete it in the app,
-    and remove all app data by uninstalling. For questions or requests about your data,
-    including access, correction, deletion or objection under the GDPR and comparable
-    laws, write to <a href="mailto:49serggor@gmail.com">49serggor@gmail.com</a> — we
-    respond within 30 days. To identify the diagnostics records that concern you we would
-    need your app-instance ID, which the app does not display; in practice the effective
-    remedy is the one above — block network access or uninstall.
+    Subject to the conditions of applicable law, you have the right to request access to
+    your personal data, its rectification or erasure, restriction of processing, and data
+    portability, as well as to object to processing based on legitimate interest. You also
+    have the right to lodge a complaint with your national data protection authority.
+  </p>
+  <p>
+    For content held on your device, these rights are exercised directly in the
+    application: projects can be reviewed, corrected, exported to a portable archive and
+    deleted at any time. For diagnostic information, please note that the data is
+    pseudonymous and the corresponding identifier is not shown in the application, so we
+    are generally unable to isolate the records relating to a particular person. In
+    practice the effective remedy is the one described in section 5.
   </p>
 
-  <h2>Children</h2>
+  <h2>9. Contact</h2>
   <p>
-    Snapvero is a work tool for professionals and is not directed at children. We do not
-    knowingly collect data from children.
+    Requests and questions concerning this policy should be addressed to
+    <a href="mailto:49serggor@gmail.com">49serggor@gmail.com</a>. We reply to requests
+    concerning personal data within 30 days.
   </p>
 
-  <h2>Changes</h2>
+  <h2>10. Children</h2>
   <p>
-    If this policy changes, the new version appears on this page with a new effective
-    date. For material changes we will announce the update on this site before it takes
-    effect.
+    Snapvero is a professional tool intended for adults and is not directed at children.
+    We do not knowingly collect personal data from children.
+  </p>
+
+  <h2>11. Changes to this policy</h2>
+  <p>
+    This policy may be updated to reflect changes in the application or in applicable law.
+    The revised version is published on this page with a new effective date, and material
+    changes are announced here before they take effect.
   </p>
 
   <nav>
