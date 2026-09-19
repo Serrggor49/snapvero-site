@@ -2,12 +2,15 @@
 <!--
   Страница поддержки: на неё указывает обязательное поле Support URL в App Store Connect
   (support_url в fastlane/metadata/ios) и контакт разработчика в Google Play. Исходник
-  здесь, публикуется из репозитория snapvero-site. Английский — язык ревьюеров; языки
-  ответа названы в тексте. Внешних ресурсов нет намеренно.
+  здесь, публикуется из репозитория snapvero-site командой tools/site/publish.sh.
+  Английский — язык ревьюеров; языки ответа названы в тексте. Внешних ресурсов нет
+  намеренно.
 
   Раздел вопросов описывает фактическое поведение приложения и обязан меняться вместе с
   ним: страница поддержки, обещающая несуществующее, — дефект того же веса, что и ошибка
-  в коде.
+  в коде. Отсюда же правило формулировок: описывать, что можно сделать, и не перечислять
+  чем именно — числа макетов, форматы бумаги, сроки ответа. Перечисление устаревает с
+  ближайшей версией, а прочитано будет как обещание.
 -->
 <html lang="en">
 <head>
@@ -24,7 +27,7 @@
   <h2>Contact</h2>
   <p>
     Write to <a href="mailto:49serggor@gmail.com">49serggor@gmail.com</a>. Enquiries are
-    answered in English or Russian, normally within two working days.
+    answered in English or Russian, by the person who develops the application.
   </p>
 
   <h2>Reporting a problem</h2>
@@ -32,8 +35,8 @@
     To resolve a problem quickly, please include:
   </p>
   <ul>
-    <li>the device and operating system version, for example iPhone 14 with iOS 18.5, or Samsung Galaxy S23 with Android 15;</li>
-    <li>the application version, shown on the Settings screen;</li>
+    <li>the device and the version of its operating system;</li>
+    <li>the version of the application, shown in Settings;</li>
     <li>the steps you took, the result you expected and the result you observed;</li>
     <li>whether the problem occurs every time or occurred once;</li>
     <li>a screenshot, where the problem is visible on screen.</li>
@@ -54,41 +57,41 @@
   <h3>How do I move a project to another device?</h3>
   <p>
     Export the project as a portable archive and import that file on the other device. The
-    archive contains the original photographs together with the annotations, so work can
-    continue without loss of quality or editability.
+    archive carries the photographs together with the annotations, so work can continue
+    without loss of quality or editability.
   </p>
 
   <h3>Can projects be recovered after the application is removed?</h3>
   <p>
-    No. Removing the application deletes its stored data, and the application is
-    deliberately excluded from system backups so that photographs of client sites are not
-    copied into cloud backups. We recommend exporting an archive of any project you would
-    not want to reconstruct, and before changing devices.
+    No. Removing the application deletes its stored data, and application data is not
+    included in system backups, so photographs of client sites are not copied into cloud
+    backups. We recommend exporting an archive of any project you would not want to
+    reconstruct, and before changing devices.
   </p>
 
   <h3>How is the appearance of a report controlled?</h3>
   <p>
-    The layout is selected at the time of export: three predefined layouts or a custom
-    grid of up to four columns and four rows, portrait or landscape orientation, A4 or
-    Letter paper, two quality profiles, an optional cover page, and a choice of which
-    business details appear in the report. The pages can be previewed before the file is
-    saved or sent.
+    The layout of the pages, the paper and orientation, and the business details shown in
+    the report are chosen on the export screen, and the result can be examined there
+    before the file is saved or sent. The options available are listed on that screen;
+    they are extended from version to version.
   </p>
 
   <h3>Can a report be edited after it is exported?</h3>
   <p>
-    Yes. Export the report in Word format and open it in Word or a compatible editor:
-    headings, captions and paragraphs remain editable text. Photographs are embedded with
-    their annotations already merged into the image.
+    Yes. Besides a fixed-layout document, the report can be exported in an editable
+    document format that opens in common word processors: headings, captions and
+    paragraphs remain editable text. Photographs are embedded with their annotations
+    already merged into the image.
   </p>
 
   <h3>Do masked areas remain hidden?</h3>
   <p>
-    In exported PDF and Word files the mask is merged into the image, so the area beneath
-    it is not present in the file. A portable archive is different by design: it preserves
-    the original photographs and the annotations separately so that the project remains
-    editable. The application warns you of this before the archive is created. Archives
-    should therefore be sent only to recipients who may see the original photographs.
+    In exported documents the mask is merged into the image, so the area beneath it is not
+    present in the file. A portable archive is different by design: it keeps the
+    photographs and the annotations separately so that the project remains editable. The
+    application warns you of this before the archive is created. Archives should therefore
+    be sent only to recipients who may see the original photographs.
   </p>
 
   <h3>The report is produced in the wrong language</h3>

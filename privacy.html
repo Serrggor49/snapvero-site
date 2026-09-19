@@ -2,16 +2,20 @@
 <!--
   Политика конфиденциальности для сторов: на неё указывает поле Privacy Policy в карточках
   App Store и Google Play и privacy_url в fastlane/metadata/ios. Здесь — исходник;
-  публикуется страница из отдельного публичного репозитория snapvero-site (GitHub Pages),
-  куда копируется при каждом изменении. Внешних ресурсов нет намеренно (ссылки наружу —
-  можно, подгрузка ресурсов — нет). Страница только на английском — это язык, который
-  читают ревьюеры обоих сторов.
+  публикуется страница из отдельного публичного репозитория snapvero-site (GitHub Pages)
+  командой tools/site/publish.sh. Внешних ресурсов нет намеренно (ссылки наружу — можно,
+  подгрузка ресурсов — нет). Страница только на английском — это язык, который читают
+  ревьюеры обоих сторов.
 
   Документ обязан описывать фактическое поведение приложения: категории данных совпадают
   с PrivacyInfo.xcprivacy, анкетой «Безопасность данных» в Play и решением 002. Менять
-  состав телеметрии, не меняя эту страницу и анкеты, нельзя. Формулировки — обобщённые
-  категории данных, а не имена событий и полей: имена меняются от версии к версии, и
-  политика от этого устаревает молча.
+  состав телеметрии, не меняя эту страницу и анкеты, нельзя.
+
+  Формулировки — обобщённые категории данных, а не имена событий и полей: имена меняются
+  от версии к версии, и политика от этого устаревает молча. По той же причине здесь нет
+  ни сроков хранения в днях, ни сроков ответа: числа, которых мы не контролируем, — это
+  обещание, которое ломается само. Прямо названо только то, что мы держим сами:
+  содержимое проектов наружу не уходит.
 -->
 <html lang="en">
 <head>
@@ -23,7 +27,7 @@
 <body>
 <main>
   <h1>Privacy Policy</h1>
-  <p class="muted">Snapvero · Effective September 16, 2026</p>
+  <p class="muted">Snapvero · Effective September 19, 2026</p>
 
   <p>
     This policy explains what information the Snapvero mobile application collects, why it
@@ -44,8 +48,8 @@
   <p>
     All content you create in the application — projects, photographs and the annotations
     drawn on them, notes and captions, the business details used in report headers, your
-    logo, and the PDF, Word and archive files produced on export — is stored locally on
-    your device. It is not transmitted to the developer and is not accessible to us.
+    logo, and the files produced on export — is stored locally on your device. It is not
+    transmitted to the developer and is not accessible to us.
   </p>
   <p>
     When you share an exported report, the file is handed to the destination you select in
@@ -120,8 +124,7 @@
     diagnostics off. You can prevent the collection described in section 3 by withdrawing
     the application's access to the network in your device settings, or by removing the
     application. Doing so does not affect any other function: Snapvero is designed to work
-    entirely offline. Should such a setting be added in a future version, this policy will
-    be updated accordingly.
+    entirely offline.
   </p>
 
   <h2>6. Recipients and international transfers</h2>
@@ -133,25 +136,22 @@
   </p>
   <p>
     Google processes this data on servers located in several countries, including the
-    United States. Transfers outside the European Economic Area are governed by the data
-    protection terms and standard contractual clauses that form part of Google's terms for
-    these services.
+    United States. Transfers outside the European Economic Area take place under the data
+    protection terms that form part of Google's terms for these services.
   </p>
 
   <h2>7. Retention</h2>
   <p>
     Because no account exists, we hold no records that identify you. Diagnostic
-    information is retained by Google for limited periods: crash reports for approximately
-    90 days, and analytics data for the retention period configured for the project, which
-    does not exceed 14 months.
+    information is kept by Google for limited periods determined by the configuration of
+    the services named in section 6, after which it is deleted or aggregated.
   </p>
   <p>
     Content stored on your device is retained until you delete it. Deleting a project
     removes it and its photographs; removing the application deletes all of its stored
-    data. The application is deliberately excluded from system backups on both platforms,
-    so its content is not copied to iCloud or to Android backup services. Files you have
-    exported or shared yourself are governed by the rules of the location you saved them
-    to.
+    data. Application data is not included in system backups, so project content is not
+    copied to cloud backup services. Files you have exported or shared yourself are
+    governed by the rules of the location you saved them to.
   </p>
 
   <h2>8. Your rights</h2>
@@ -173,8 +173,8 @@
   <h2>9. Contact</h2>
   <p>
     Requests and questions concerning this policy should be addressed to
-    <a href="mailto:49serggor@gmail.com">49serggor@gmail.com</a>. We reply to requests
-    concerning personal data within 30 days.
+    <a href="mailto:49serggor@gmail.com">49serggor@gmail.com</a>. Requests concerning
+    personal data are answered within the period required by applicable law.
   </p>
 
   <h2>10. Children</h2>
@@ -186,8 +186,8 @@
   <h2>11. Changes to this policy</h2>
   <p>
     This policy may be updated to reflect changes in the application or in applicable law.
-    The revised version is published on this page with a new effective date, and material
-    changes are announced here before they take effect.
+    The revised version is published on this page, and the effective date shown above is
+    updated with it.
   </p>
 
   <nav>
